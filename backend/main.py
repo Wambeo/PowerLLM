@@ -87,7 +87,7 @@ def query_groq_api(conversation: Conversation) -> Dict:
         raise HTTPException(status_code=500, detail=f"Error with Groq API: {str(e)}")
 
 # API route
-@app.post("/travel-info/")
+@app.post("/chat/")
 async def travel_info(input: UserInput):
     conversation = get_or_create_conversation(input.conversation_id)
 
